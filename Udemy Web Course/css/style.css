@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
+body {
+  font-family: fantasy;
+  font-weight: 400;
+  margin: 0px;
+}
+
+body h1 {
+  font-weight: 300;
+  margin: 20px 30px;
+}
+
+#main-header {
+  border-bottom: 2px solid #000;
+}
+
+
+#top-stories {
+  width: 1000px;
+  margin: auto;
+}
+
+article{
+  max-width: 33%;
+  display: inline-block;
+}
+
+article img{
+  max-width: 100%;
+}

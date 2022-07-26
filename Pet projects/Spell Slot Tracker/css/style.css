@@ -1,0 +1,42 @@
+body{
+  padding: 25px;
+  width: fit-content;
+  align-self: center;
+  background-image: url(../images/background/magic-circle-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: aliceblue;
+  max-width: 500px;
+  margin: auto;
+}
+
+main{
+  margin: 55px;
+  width: fit-content;
+  align-self: center;
+}
+
+
+
+.character-properties{
+  display: flex;
+  margin: 10px;
+}
+
+.character-properties > #set-properties-btn{
+  padding: 15px;
+  margin:10px 20px;
+  border-radius: 20px;
+}
+
+#spell-grid section{
+  display: flex;
+  /* margin-left: 95px; */
+}
+
+#spell-grid button{
+  padding: 15px;
+  margin:10px;
+  border-radius: 10px;
+}
+
