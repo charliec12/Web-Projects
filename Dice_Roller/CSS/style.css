@@ -1,0 +1,31 @@
+body{
+  background-color: #293462;
+}
+
+h1{
+  font-size: 6rem;
+  text-align: center;
+}
+
+h1,p{
+  font-family: 'Lemon', cursive;
+  color: #1CD6CE;
+}
+
+
+/* ------------------ Main Section ------------------ */
+.dice{
+  margin:10%;
+  text-align: center;
+  display: inline-block;
+}
+
+.container{
+  width: 70%;
+  margin:auto;
+  text-align: center;
+}
+
+.title_text{
+  margin-top: 10%;
+}
