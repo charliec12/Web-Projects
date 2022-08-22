@@ -1,0 +1,26 @@
+/* .default{
+
+} */
+
+button{
+  text-align: center;
+  color: blue;
+  border-radius: 10px;
+  padding:10px;
+  border: none;
+  /* background-color: #889097; */
+}
+
+/* .btn{
+  background-color: #889097;
+} */
+.container{
+  text-align: center;
+}
+.custom{
+  color: black;
+  border: none;
+}
+.custom:active{
+  
+}
