@@ -1,0 +1,24 @@
+table,td{
+  border-style: double;
+}
+
+.title, .title-inverted{
+  text-align: center;
+}
+
+.title-inverted{
+  background-color: black;
+  color: white;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.colored-table{
+  border-style: solid;
+  background: yellow;
+}
+
+.intro{
+  width: 50%;
+  margin-left:25%;
+}
