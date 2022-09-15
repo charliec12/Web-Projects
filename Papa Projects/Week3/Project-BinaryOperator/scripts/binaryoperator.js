@@ -1,58 +1,137 @@
-function binaryAnd(){
-  var a = 1;
-  var b = 1;
+function binaryAND(){
+  var binaryA;
+  var binaryB;
+  var binaryOp;
 
-  updateTable(a,b)
+  buildHeader();
+
+    for(i=0;i<=1;i++){
+      binaryA = i;
+      for(j=0;j<=1;j++){
+        binaryB = j;
+
+        if(binaryA==binaryB){
+          binaryOp=1;
+          //Insert data
+          buildTable(binaryA,binaryB,binaryOp);
+
+        }else{
+          binaryOp=0;
+          buildTable(binaryA,binaryB,binaryOp);
+        }
+      }
+    }
+
 }
 
-function binaryOr(){
-  var a = 1;
-  var b = 1;
+function binaryOR(){
+  var binaryA;
+  var binaryB;
+  var binaryOp;
 
-  updateTable(a,b)
+  buildHeader();
+
+    for(i=0;i<=1;i++){
+      binaryA = i;
+      for(j=0;j<=1;j++){
+        binaryB = j;
+
+        if(binaryA==1 || binaryB==1){
+          binaryOp=1;
+          //Insert data
+          buildTable(binaryA,binaryB,binaryOp);
+
+        }else{
+          binaryOp=0;
+          buildTable(binaryA,binaryB,binaryOp);
+        }
+      }
+    }
+
 }
 
-function binaryNot(){
-  var a = 1;
-  var b = 1;
+function binaryNOT(){
 
-  updateTable(a,b)
+  var binaryA;
+  var binaryB;
+  var binaryOp;
+  
+  buildHeader();
+
+    for(i=0;i<=1;i++){
+      binaryA = i;
+      for(j=0;j<=1;j++){
+        binaryB = j;
+
+        if(binaryA!=binaryB){
+          binaryOp=1;
+          //Insert data
+          buildTable(binaryA,binaryB,binaryOp);
+
+        }else{
+          binaryOp=0;
+          buildTable(binaryA,binaryB,binaryOp);
+        }
+      }
+    }
+
 }
 
-function binaryXor(){
-  var a = 1;
-  var b = 1;
+function binaryXOR(){
 
-  updateTable(a,b)
-}
-
-function updateTable(binaryA,binaryB) {
-  var dataTable = document.getElementById(
-    'data');
-
-  dataTable.innerHTML = '';
+  var binaryA;
+  var binaryB;
+  var binaryOp;
 
   //Header row
+  buildHeader();
+
+    for(i=0;i<=1;i++){
+      binaryA = i;
+      for(j=0;j<=1;j++){
+        binaryB = j;
+
+        if(binaryA==0 && binaryB==0 || binaryA==1 && binaryB==1){
+          binaryOp=0;
+          //Insert data
+          buildTable(binaryA,binaryB,binaryOp);
+
+        }else{
+          binaryOp=1;
+          buildTable(binaryA,binaryB,binaryOp);
+        }
+      }
+    }
+
+}
+
+function buildHeader(){
+  var dataTable = document.getElementById('data');
+  dataTable.innerHTML = '';
+
   var row = dataTable.insertRow(0);
   var aCell = row.insertCell(0);
   var bCell = row.insertCell(1);
-  var orCell = row.insertCell(2);
+  var opCell = row.insertCell(2);
 
   aCell.innerHTML = 'A';
   bCell.innerHTML = 'B';
-  orCell.innerHTML = 'A||B';
+  opCell.innerHTML = 'A||B';
+}
 
-  //Insert data
-  for (var i = 0; i < timeArray.length; i++) {
-    var row = dataTable.insertRow(-1);
-    var timeCell = row.insertCell(0);
-    var distanceCell = row.insertCell(1);
-    var heightCell = row.insertCell(2);
+function buildTable(binaryA,binaryB,binaryOp){
+  var dataTable = document.getElementById('data');
+  var row;
+  var binaryACell;
+  var binaryBCell;
+  var binaryOpCell;
 
-    timeCell.innerHTML = timeArray[i].toFixed(2);
-    distanceCell.innerHTML = distanceArray[i].toFixed(
-      2);
-    heightCell.innerHTML = heightArray[i].toFixed(
-      2);
-  }
+  row = dataTable.insertRow(-1);
+  binaryACell = row.insertCell(0);
+  binaryBCell = row.insertCell(1);
+  binaryOpCell = row.insertCell(2);
+
+  binaryACell.innerHTML = binaryA;
+  binaryBCell.innerHTML = binaryB;
+  binaryOpCell.innerHTML = binaryOp;
 }
