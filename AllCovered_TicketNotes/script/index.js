@@ -69,4 +69,4 @@ function displayMes() {
 
 newEntryButton.addEventListener("click", clearForm);
 copyEntryButton.addEventListener("click", copyToClipBoard);
-exportEntryButton.addEventListener("click", displayMes);
+// exportEntryButton.addEventListener("click", displayMes);

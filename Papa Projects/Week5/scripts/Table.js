@@ -1,4 +1,4 @@
-// Removes all record data from localStorage 
+// Removes all record data from localStorage
 $("#btnClearHistory").click(function () {
   localStorage.removeItem("tbRecords");
   listRecords();
@@ -56,7 +56,7 @@ function loadUserInformation() {
     var user = JSON.parse(localStorage.getItem(
       "user"));
   } catch (e) {
-    /* Google browsers use different error 
+    /* Google browsers use different error
      * constant
      */
     if (window.navigator.vendor ===
@@ -116,9 +116,9 @@ function loadUserInformation() {
 
 function clearRecordForm() {
   $('#datExamDate').val("");
-  $('#txtTSH').val("");
-  $('#txtThyroglobulin').val("");
-  $('#txtSynthroidDose').val("");
+  $('#txtLB').val("");
+  $('#txtHeight').val("");
+  $('#txtBMI').val("");
   return true;
 }
 
@@ -138,7 +138,7 @@ function listRecords() {
     var tbRecords = JSON.parse(localStorage.getItem(
       "tbRecords"));
   } catch (e) {
-    /* Google browsers use different error 
+    /* Google browsers use different error
      * constant
      */
     if (window.navigator.vendor ===
@@ -207,11 +207,11 @@ function showRecordForm(index) {
       "tbRecords"));
     var rec = tbRecords[index];
     $('#datExamDate').val(rec.Date);
-    $('#txtTSH').val(rec.TSH);
-    $('#txtThyroglobulin').val(rec.Tg);
-    $('#txtSynthroidDose').val(rec.SynthroidDose);
+    $('#txtLB').val(rec.TSH);
+    $('#txtHeight').val(rec.Tg);
+    $('#txtBMI').val(rec.SynthroidDose);
   } catch (e) {
-    /* Google browsers use different error 
+    /* Google browsers use different error
      * constant
      */
     if (window.navigator.vendor ===
@@ -234,7 +234,7 @@ function showRecordForm(index) {
  * the future
  */
 function checkRecordForm() {
-  //for finding current date 
+  //for finding current date
   var d = new Date();
   var month = d.getMonth() + 1;
   var date = d.getDate();
@@ -243,12 +243,12 @@ function checkRecordForm() {
     month + '/' +
     (('' + date).length < 2 ? '0' : '') + date;
 
-  if (($("#txtTSH").val() != "") &&
+  if (($("#txtLB").val() != "") &&
     ($("#datExamDate").val() != "") &&
     ($("#datExamDate").val() <= currentDate) &&
-    (parseFloat($("#txtSynthroidDose").val()) <
+    (parseFloat($("#txtBMI").val()) <
       1000000) &&
-    ($("#txtSynthroidDose").val() != "")) {
+    ($("#txtBMI").val() != "")) {
     return true;
   } else {
     return false;
@@ -275,9 +275,9 @@ function addRecord() {
   if (checkRecordForm()) {
     var record = {
       "Date": $('#datExamDate').val(),
-      "TSH": $('#txtTSH').val(),
-      "Tg": $('#txtThyroglobulin').val(),
-      "SynthroidDose": $('#txtSynthroidDose')
+      "TSH": $('#txtLB').val(),
+      "Tg": $('#txtHeight').val(),
+      "SynthroidDose": $('#txtBMI')
         .val()
     };
 
@@ -295,7 +295,7 @@ function addRecord() {
       clearRecordForm();
       listRecords();
     } catch (e) {
-      /* Google browsers use different error 
+      /* Google browsers use different error
        * constant
        */
       if (window.navigator.vendor ===
@@ -326,7 +326,7 @@ function deleteRecord(index) {
     tbRecords.splice(index, 1);
 
     if (tbRecords.length == 0) {
-      /* No items left in records, remove entire 
+      /* No items left in records, remove entire
        * array from localStorage
        */
       localStorage.removeItem("tbRecords");
@@ -335,7 +335,7 @@ function deleteRecord(index) {
         tbRecords));
     }
   } catch (e) {
-    /* Google browsers use different error 
+    /* Google browsers use different error
      * constant
      */
     if (window.navigator.vendor ===
@@ -360,10 +360,10 @@ function editRecord(index) {
         "tbRecords"));
       tbRecords[index] = {
         "Date": $('#datExamDate').val(),
-        "TSH": $('#txtTSH').val(),
-        "Tg": $('#txtThyroglobulin').val(),
+        "TSH": $('#txtLB').val(),
+        "Tg": $('#txtHeight').val(),
         "SynthroidDose": $(
-          '#txtSynthroidDose').val()
+          '#txtBMI').val()
       }; //Alter the selected item in the array
       tbRecords.sort(compareDates);
       localStorage.setItem("tbRecords", JSON.stringify(
@@ -372,7 +372,7 @@ function editRecord(index) {
       clearRecordForm();
       listRecords();
     } catch (e) {
-      /* Google browsers use different error 
+      /* Google browsers use different error
        * constant
        */
       if (window.navigator.vendor ===
