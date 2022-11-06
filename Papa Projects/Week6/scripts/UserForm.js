@@ -48,8 +48,9 @@ function saveUserForm() {
         "#txtLB option:selected").val(),
       "Height": $(
         "#txtHeight option:selected").val(),
-      "BMI": $(
-        "#txtBMI option:selected").val()
+      "BMI": function(){
+        ($(#txtLB option:selected).val()*$(txtHeight option:selected))*703;
+      };
     };
 
     try {

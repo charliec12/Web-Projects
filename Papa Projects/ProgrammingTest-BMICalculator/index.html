@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">
+    <script src="scripts/jquery-1.8.3.min.js"></script>
+    <script src="scripts/chromeFileProtocolFix.js"></script>
+    <script src="scripts/jquery.mobile-1.3.1.min.js">
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div data-role="page" id="bmi-information">
+      <div data-role="header">
+        <h1>BMI Calculator</h1>
+      </div>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#bmi-information" class="ui-btn-active ui-state-persist">
+            Information</a>
+          </li>
+          <li><a href="#bmi-calculator">Calculator</a>
+          </li>
+        </ul>
+      </div>
+      <h1>BMI Categories:</h1>
+      <div data-role="content">
+        <table>
+          <tr>
+            <td>Underweight</td>
+            <td> = </td>
+            <td> < 18.5</td>
+          </tr>
+
+          <tr>
+            <td>Normal Weight</td>
+            <td> = </td>
+            <td> < 18.5 – 24.9 </td>
+          </tr>
+
+          <tr>
+            <td>Overweight</td>
+            <td> = </td>
+            <td> < 25–29.9 </td>
+          </tr>
+
+          <tr>
+            <td>Obesity</td>
+            <td> = </td>
+            <td>< BMI of 30 or greater</td>
+          </tr>
+        </table>
+
+        <h3>Maintain a Healthy Weight</h3>
+        <p>Maintaining a healthy weight is important for your heart health.
+        Learn more about overweight and obesity
+        Increase Physical Activity</p>
+        <p>Moving more can lower your risk factors for heart disease.
+        Eat a Heart-Healthy Diet</p>
+        <p>Eating a healthy diet is the key to heart disease prevention.</p>
+      </div>
+    </div>
+
+    <div data-role="page" id="bmi-calculator">
+      <div data-role="header">
+        <h1>BMI Calculator</h1>
+      </div>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#bmi-information" class="ui-btn-active ui-state-persist">
+            Information</a>
+          </li>
+          <li><a href="#bmi-calculator">Calculator</a>
+          </li>
+        </ul>
+      </div>
+
+      <div data-role="content">
+        <fieldset>
+          <h2>Adult BMI Calculator</h2>
+          <form class="" action="index.html" method="post">
+            <h3>1. Height </h3>
+            <label for="feet"> Feet
+              <input type="text" id="startFeet" name="feet" value="">
+            </label>
+            <label for="inches"> Inches
+              <input type="text" id="startInches" name="inches" value="">
+            </label>
+
+            <h3>2. Weight </h3>
+            <label for="pounds"> Pounds
+              <input type="text" id="startWeight" name="pounds" value=""/>
+            </label>
+            <button type="button" name="submitButton" onclick="calcBMI()">Calculate</button>
+          </form>
+          <label id="resultLabel"></label>
+        </fieldset>
+      </div>
+    </div>
+    <script src="scripts/bmiCalc.js" charset="utf-8"></script>
+  </body>
+</html>
