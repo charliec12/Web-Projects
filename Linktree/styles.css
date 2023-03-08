@@ -1,0 +1,55 @@
+*{
+	margin:0;
+	padding:0;	
+}
+
+body{
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-image:url("https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+h3{
+	color:#FFFFFF
+}
+ul{
+	list-style:none;
+	margin:8px;
+	color:#FFFFFF
+}
+
+li{
+	margin:8px;
+}
+
+main{
+	display:flex;
+	flex-direction:column;
+	margin:50px auto;
+	max-width:300px;
+}
+
+.portfolio-img{
+	border-radius:50%;
+	margin:0 auto;
+}
+.bio{
+	text-align:center;
+	color:#FFFFFF;
+	margin:10px auto;
+}
+.link-btn{
+	background-color:#DCD6F7;
+	padding:16px 20px;
+	margin-bottom:20px;
+	border-radius: 6px;
+	color:#000000;
+	text-decoration:none;
+	text-align:center;
+}
+.link-btn:hover{
+	background:transparent;
+	border:1px solid #FFFFFF;
+	color:#424874;
+}
