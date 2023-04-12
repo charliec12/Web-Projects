@@ -1,0 +1,110 @@
+/* .container_ {
+    position: absolute;
+    left: 584px;
+    top: 20px;
+    width: 500px;
+    height: 920px;
+  } */
+  
+  .container {
+    /* position: absolute;
+    left: 0px;
+    top: 0px; */
+    margin: auto;
+    width: 500px;
+    height: 920px;
+    border-radius: 35px;
+    background: #d3d3d3;
+    background-blend-mode: normal;
+  }
+  
+  img {
+    /* left: 0px;*/
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 169.58px;
+    /* background:  url(img.png)  no-repeat; */
+    z-index: 1;
+  }
+/*   
+  -------------- */
+  h1 {
+    /* position: absolute;
+    left: 660.5px;
+    top: 216.34px; */
+    margin: 15px auto;
+    width: 350px;
+    height: 77.46px;
+    font-family: Jomhuria;
+    font-size: 48px;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+/*   
+  --------------- */
+.contacts input{
+    /* position: absolute;
+    left: 0px;
+    top: 0px; */
+    margin:  10px auto;
+    display: flex;
+    align-items: center;
+    width: 349.53px;
+    height: 40.64px;
+  }
+/* 
+  ------------------ */
+  .camps{
+    display: block;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+  }
+
+  .camps input{
+    margin: 10px auto;
+}
+  /* .camps input {
+    position: absolute;
+    left: 660.5px;
+    top: 578.9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 99.5px;
+    height: 84px;
+  } */
+
+  /* ---------------------- */
+  p {
+    /* position: absolute;
+    left: 647.5px;
+    top: 707.9px; */
+    margin: 10px auto;
+    width: 376px;
+    height: 115px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+  }
+/*   
+  ---------------- */
+  .register {
+    /* position: absolute;
+    left: 667.5px;
+    top: 867.9px; */
+    /* margin: auto; */
+    width: 343px;
+    margin: auto 15%;
+    height: 50px;
+    font-size: 2em;
+  }
+  .header h3{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}

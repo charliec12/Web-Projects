@@ -3,33 +3,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="index_2.css">
+    <title>Summer Camp Registration</title>
 </head>
 <body>
-    <h1>Summer Camp Registration</h1>
-
-    <h3>Date : </h3>
-    <h3>Location : </h3>
-
-    <form action="">
-        <div class="contacts">
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
-            <input type="number" placeholder="Phone">
-            <input type="email" placeholder="Email">
+    
+    <main>
+        
+        <div class="container">
+            <img src="https://yetiacademy.com/wp-content/uploads/2020/06/STEM-Education.jpg" alt="">
+        
+            <div class="header">
+                <h1>Summer Camp Registration</h1>
+    
+        <h3>Date : </h3>
+        <h3>Location : </h3>
+            </div>
+            
+        <br>
+        <form action="">
+            <div class="contacts">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+                <input type="tel" placeholder="Phone">
+                <input type="email" placeholder="Email">
+            </div>
+            <br>
+            <div class="camps">
+                <input type="radio" id="camp1" name="camp" value="Camp1">
+                <label for="camp1">Python Programming for Beginners</label><br>
+                <input type="radio" id="camp2" name="camp" value="Camp2">
+                <label for="camp2">Game Design and Development</label><br>
+                <input type="radio" id="camp3" name="camp" value="Camp3">
+                <label for="camp3">Robotics</label>
+            </div>
+            
+            <p>
+                Terms of Agreement:
+                By registering you are agreeing to the following terms:
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Sem fringilla ut morbi tincidunt augue. 
+                Tristique nulla aliquet enim tortor at auctor urna nunc id.
+            </p>
+    
+            <input class="register" type="submit" name="" id="" value="Register">
+        </form>
         </div>
         
-        <div class="camps">
-            <input type="checkbox" id="camp1" name="camp1" value="Camp1">
-            <label for="camp1">Python Programming for Beginners</label>
-            <input type="checkbox" id="camp2" name="camp2" value="Camp2">
-            <label for="camp2">Game Design and Development</label>
-            <input type="checkbox" id="camp3" name="camp3" value="Camp3">
-            <label for="camp3">Robotics</label>
-        </div>
-        
-
-        <input type="submit" name="" id="" value="Register">
-    </form>
+    </main>
+    
 </body>
 </html>
