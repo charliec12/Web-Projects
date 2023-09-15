@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  table {
+    border: solid 2px;
+    margin: 10px 45%;
+  }
+  
+  main {
+    margin: 3% 25%;
+    border: solid 2px navy;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+  }
+  
