@@ -11,10 +11,13 @@
   }
 
   body{
+    width: 100%;
+    /* height: 50%; */
     background: #f3f3f3;
     background-image:url(image/donut-1200x800.png);
   }
   header, footer{
+    width: 100%;
     height: 55px;
     background: #860a35;
     padding-top: 4px;
@@ -56,6 +59,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
 
   /* ---------------------------------
@@ -78,6 +82,8 @@
     font-size: 5rem;
   color: #860a35;
   }
+
+
 /* Menu Page */
 #menu-view {
     display: flex;
@@ -126,7 +132,9 @@
   /* Gallery Page */
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
+    /* max-width: 1000px; */
+    width: 59.4%;
+    height: 61.8%;
     margin: auto;
   }
   
@@ -153,7 +161,7 @@
   
   /* Position the "next button" to the right */
   .next {
-    right: 373px;
+    right: 250px;
     border-radius: 3px 0 0 3px;
   }
   
@@ -166,4 +174,82 @@
   .fade {
     animation-name: fade;
     animation-duration: 1.5s;
+  }
+
+  /* About Page */
+  #about-page {
+    background-color: #af2655;
+    width: 45%;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  #about-page table{
+    color: #f3f3f3;
+    font-size:2rem;
+    
+  }
+
+  #about-page tr{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #about-page p{
+    color: #f3f3f3;
+    font-size: 1.5rem;
+    line-height: 25px;
+  }
+
+  @media screen and (max-width: 500px) {
+    body{
+      height: 100%;
+      background-image:url(image/sprinkle.png);
+    }
+
+    section img{
+      width: 65%;
+    }
+
+    .socials-section ul li{
+      margin: 0 80px;
+    }
+
+    footer{
+      position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+    }
+
+    #menu-view{
+      padding: 15px;
+    }
+
+    #about-page{
+      width: 85%;
+    }
+
+    #menu-view table tr {
+      font-size: 1.3rem;
+    }
+    
+    #menu-view table td {
+      font-size: 0.9rem;
+    }
+
+    .slideshow-container {
+      width: 89.1%;
+      /* width: 35%;
+      height: 45%; */
+      margin: auto;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
   }
